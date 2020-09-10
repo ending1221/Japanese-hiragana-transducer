@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五十音拼音轉換器</title>
+</head>
+<body>
+    
+    <div class="panels">
+        <div class="panel">
+        <h3>Hiragana</h3>
+        <h1>五十音拼音轉換</h1>
+        <textarea rows="4" placeholder="輸入日文" id="input">あいうえお</textarea>
+        <div class="symbol">⇵</div>
+        <textarea rows="4" placeholder="輸入羅馬拼音" id="output"></textarea>
+        <div class="buttons">
+            <button class="" id="convert" data-hiragana="true">あ</button>
+            <button class="purple" id="btnRoma">轉換成羅馬拼音</button>
+            <button class="yellow" id="btnJp">轉換回來</button>
+        </div>
+        </div>
+        <div class="panel">
+        <h3>翻譯清單</h3>
+        <hr/>
+        <ul class="translist"></ul>
+        </div>
+    </div>
+    <div class="decoration"></div>
+</body>
+</html>
