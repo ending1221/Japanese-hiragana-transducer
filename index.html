@@ -9,20 +9,23 @@
 <body>
     <div class="panels">
         <div class="panel">
-            <h3>Japanese Hiragana Transducer</h3>
             <h1>五十音拼音轉換</h1>
+            <h3>Japanese Hiragana Transducer</h3>
             <div class="texts">
                 <textarea rows="4" placeholder="輸入日文" id="input">あいうえお</textarea>
                 <div class="symbol">⇄</div>
                 <textarea rows="4" placeholder="輸入羅馬拼音" id="output"></textarea>
             </div>
             <div class="buttons">
-                <button class="" id="convert">あ</button>
+                <button class="" id="convert" title="轉換模式">あ</button>
                 <button class="purple" id="btnRoma">轉換成羅馬拼音</button>
                 <button class="yellow" id="btnJp">轉換回來</button>
             </div>
         </div>
-        <div class="panel">
+        <button class="btnDisplay">
+            <div class="symbol">▲</div>
+        </button>
+        <div class="panel" id="allList">
             <h3>對應表</h3>
             <hr/>
             <ul class="translist"></ul>
