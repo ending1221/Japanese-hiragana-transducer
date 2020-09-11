@@ -1,0 +1,165 @@
+$colorPurple: rgb(167, 145, 206);
+$colorYellow: #FFB637;
+$colorBlack: rgb(30, 32, 33);
+
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+    // border: 1px solid #000
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+    
+body {
+    // padding: 100px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #37353a;
+}
+
+    
+.panels {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    max-height: 80vh;
+    position: relative;
+    z-index: 1;
+}
+
+.panel {
+    flex: 5;
+    margin-top: 10px;
+    padding: 30px;
+    color: $colorPurple;
+    background-color: $colorBlack;
+    box-shadow: 0px 0px 30px rgba(black,0.2);
+    border-radius: 5px;
+    &.yellow {
+        flex: 4;
+        background-color: $colorYellow;
+    }
+}
+
+    
+h1,h3 {
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-weight: 500;
+}
+    
+.texts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+textarea {
+    width: 45%;
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 20px;
+    letter-spacing: 1px;
+    outline: none;
+    border: solid 2px rgba(black,0.3);
+    background-color: $colorBlack;
+    color: whitesmoke;
+    &:focus {
+        border-color: $colorPurple;
+    }
+}
+
+    
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+    
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    border: none;
+    &:hover {
+        filter: brightness(80%);
+        transition: 0.5s;
+    }
+    &.yellow {
+        background-color: $colorYellow;
+        color: $colorBlack;
+    }
+        
+    &.purple {
+        background-color: $colorPurple;
+        color: $colorBlack;
+    }
+        
+    &.white {
+        background-color: white;
+        border: solid 2px $colorPurple;
+    }
+}
+
+    
+//交換符號
+.symbol {
+    font-size: 24px;
+    font-weight: 900;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+}
+
+
+hr {
+    border: none;
+    border-bottom: solid 1px $colorPurple;
+}
+
+    
+//背景文字
+    
+.decoration {
+    font-size: 500px;
+    color: white;
+    position: absolute;
+    font-weight: 900;
+    opacity: 0.1;
+}
+
+    
+//翻譯清單 flex排版
+    
+.translist {
+    max-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    li {
+        margin-bottom: 5px;
+        font-size: 18px;
+        width: 20%;
+    }        
+}
+
+
