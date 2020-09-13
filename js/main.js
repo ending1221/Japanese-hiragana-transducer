@@ -70,6 +70,16 @@ const getResult = function (func, text) {
     }
     return result
 }
+const colorAnimate = function (block) {  
+    block.animate([
+        // keyframes
+        { backgroundColor: 'rgb(167, 145, 206)' }, 
+        { backgroundColor: 'transparent' }
+    ], { 
+        // timing options
+        duration: 1000,
+    });
+}
 
 const translateToRoman = function() {  
     let text = $input.value;
@@ -79,6 +89,7 @@ const translateToRoman = function() {
     }
     $output.innerHTML = result;
     symbolRotate();
+    colorAnimate($output);
 }
 
 const translateToJP = function() {  
@@ -86,6 +97,7 @@ const translateToJP = function() {
     const result = getResult(getJpWord, text);
     $input.innerHTML = clearBlank(result);
     symbolRotate();
+    colorAnimate($input);
 }
 
 const ckeckResult = function(result) {  
