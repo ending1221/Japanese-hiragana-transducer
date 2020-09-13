@@ -101,6 +101,7 @@ button {
     font-weight: 500;
     letter-spacing: 3px;
     border: none;
+    cursor: pointer;
     &:hover {
         filter: brightness(80%);
         transition: 0.5s;
@@ -138,6 +139,7 @@ button {
     background-color: $colorBlack;
     color: $colorPurple;
     z-index: 1;
+    cursor: pointer;
     .symbol {
         font-size: 18px;
         transform: rotate(0deg);
