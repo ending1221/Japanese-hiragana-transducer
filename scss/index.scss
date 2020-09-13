@@ -49,6 +49,11 @@ body {
     }
 }
 
+#allList {
+    max-height: 35vh;
+    overflow: auto;
+}
+
     
 h1,h3 {
     text-align: center;
@@ -138,6 +143,7 @@ button {
     margin: 5px 0 -15px 0;
     background-color: $colorBlack;
     color: $colorPurple;
+    border-radius: 5px 5px 0 0;
     z-index: 1;
     cursor: pointer;
     .symbol {
@@ -146,11 +152,12 @@ button {
     }
 }
 .rotate {
+    border-radius: 5px;
     .symbol {
         transform: rotate(180deg);
     }
 }
-.rotate.panel {
+.rotate#allList {
     // display: none;
     max-height: 0px;
     padding: 0 30px;
@@ -193,3 +200,10 @@ hr {
 }
 
 
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: $colorBlack;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $colorPurple;
+}

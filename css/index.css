@@ -61,6 +61,11 @@ body {
   background-color: #FFB637;
 }
 
+#allList {
+  max-height: 35vh;
+  overflow: auto;
+}
+
 h1, h3 {
   text-align: center;
   margin: 0;
@@ -162,6 +167,7 @@ button.white {
   margin: 5px 0 -15px 0;
   background-color: #1e2021;
   color: #a791ce;
+  border-radius: 5px 5px 0 0;
   z-index: 1;
   cursor: pointer;
 }
@@ -172,12 +178,16 @@ button.white {
           transform: rotate(0deg);
 }
 
+.rotate {
+  border-radius: 5px;
+}
+
 .rotate .symbol {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.rotate.panel {
+.rotate#allList {
   max-height: 0px;
   padding: 0 30px;
   overflow: hidden;
@@ -218,5 +228,14 @@ hr {
   margin-bottom: 5px;
   font-size: 18px;
   width: 20%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #1e2021;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a791ce;
 }
 /*# sourceMappingURL=index.css.map */
