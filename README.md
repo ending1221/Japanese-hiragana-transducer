@@ -1,6 +1,6 @@
 # Japanese hiragana transducer
 
-HTML/SCSS
+HTML / SCSS / JavaScript
 
 ## DEMO
 
