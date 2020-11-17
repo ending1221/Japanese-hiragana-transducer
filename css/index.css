@@ -153,6 +153,10 @@ textarea:focus {
   margin-top: 30px;
 }
 
+.buttons #convert {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 button {
   padding: 10px 20px;
   border-radius: 5px;
