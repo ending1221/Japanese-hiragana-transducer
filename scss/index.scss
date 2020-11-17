@@ -7,6 +7,12 @@ $colorBlack: rgb(30, 32, 33);
     // border: 1px solid #000
 }
 
+@mixin mobile {
+    @media(max-width: 768px) {
+        @content
+    }
+}
+
 html,body {
     width: 100%;
     height: 100%;
@@ -14,13 +20,18 @@ html,body {
 }
     
 body {
-    // padding: 100px;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #37353a;
+
+    @include mobile {
+        width: 100vw;
+        height: 100vh;
+        overflow-y: auto;
+    }
 }
 
     
@@ -32,6 +43,10 @@ body {
     max-height: 90vh;
     position: relative;
     z-index: 1;
+    @include mobile {
+        max-width: 100vw;
+        max-height: 100vh;
+    }
 }
 
 .panel {
@@ -76,6 +91,9 @@ h3 {
     justify-content: space-around;
     align-items: center;
     margin-top: 30px;
+    @include mobile {
+        flex-direction: column;
+    }
 }
 textarea {
     width: 45%;
@@ -90,6 +108,9 @@ textarea {
     color: whitesmoke;
     &:focus {
         border-color: $colorPurple;
+    }
+    @include mobile {
+        width: 100%;
     }
 }
 
@@ -139,6 +160,10 @@ button {
     text-align: center;
     display: inline-block;
     transition: 0.75s;
+    @include mobile {
+        transform: rotate(90deg);
+        padding: .5rem;
+    }
 }
 
 .btnDisplay {
@@ -169,6 +194,9 @@ button {
 
 .rotate360 {
     transform: rotate(360deg);
+    @include mobile {
+        transform: rotate(450deg);
+    }
 }
 
 hr {
@@ -199,7 +227,14 @@ hr {
         margin-bottom: 5px;
         font-size: 18px;
         width: 20%;
-    }        
+        @include mobile {
+            width: 33%;
+            font-size: 16px;
+        } 
+    }   
+    @include mobile {
+        max-height: 80vh;
+    }     
 }
 
 
