@@ -179,6 +179,9 @@ button {
     border-radius: 5px 5px 0 0;
     z-index: 1;
     cursor: pointer;
+    +mobile {
+        min-height: 4rem;
+    }
     .symbol {
         font-size: 18px;
         transform: rotate(0deg);

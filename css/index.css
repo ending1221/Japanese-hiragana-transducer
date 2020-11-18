@@ -218,6 +218,10 @@ button.white {
   cursor: pointer;
 }
 
+.btnDisplay + mobile {
+  min-height: 4rem;
+}
+
 .btnDisplay .symbol {
   font-size: 18px;
   -webkit-transform: rotate(0deg);
